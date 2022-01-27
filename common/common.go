@@ -9,7 +9,6 @@ func (k Key) String() string {
 
 const (
 	TrackingIDKey Key = "x-tracking-id"
-	TenantIDKey   Key = "x-tenant-id"
 	ObjIDKey      Key = "objID"
 	LoggerKey     Key = "logger"
 	ErrorKey      Key = "error"
@@ -17,5 +16,5 @@ const (
 
 const (
 	HealthCheckPath = "/healthcheck"
-	AppDefaultPath  = "/v1/app_name"
+	AppDefaultPath  = "/v1/url-shortener"
 )
