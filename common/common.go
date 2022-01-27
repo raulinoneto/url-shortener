@@ -16,5 +16,5 @@ const (
 
 const (
 	HealthCheckPath = "/healthcheck"
-	AppDefaultPath  = "/v1/url-shortener"
+	AppDefaultPath  = "/v1/url-handlers"
 )
