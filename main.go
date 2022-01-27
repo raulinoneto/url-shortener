@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+
 	"github.com/raulinoneto/url-shortener/logger"
 	"github.com/raulinoneto/url-shortener/server"
 )
