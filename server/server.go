@@ -13,24 +13,16 @@ import (
 )
 
 type (
-	TLSCertificates struct {
-		CertFile string
-		KeyFile  string
-	}
-
 	Options struct {
 		Logger           logrus.FieldLogger
 		MiddlewareSetter func(e *echo.Echo)
 		HandlersSetter   func(e *echo.Echo)
 		Port             string
 		Host             string
-		TLSCert          string
-		TLSKey           string
 	}
 
 	Server struct {
 		E               *echo.Echo
-		tlsCertificates *TLSCertificates
 		port            string
 		host            string
 		serverRunning   bool
@@ -48,10 +40,6 @@ func New(opt *Options) *Server {
 		port:          opt.Port,
 		host:          opt.Host,
 		serverRunning: false,
-		tlsCertificates: &TLSCertificates{
-			CertFile: opt.TLSCert,
-			KeyFile:  opt.TLSKey,
-		},
 	}
 }
 
